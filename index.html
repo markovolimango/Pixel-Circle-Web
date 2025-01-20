@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Pixel Circle</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Pixel Circle</h1>
+
+<div class="options">
+    <div class="input-field">
+        <label for="a-input">Dimensions:</label>
+        <input id="a-input" max="100" min="0" type="number">
+        <input id="b" max="100" min="0" type="number">
+    </div>
+
+    <div class="input-field">
+        <label for="fill-color-input">Fill Color:</label>
+        <input id="fill-color-input" type="color" value="#F15025">
+    </div>
+
+    <div class="input-field">
+        <label for="thickness-input">Outline Thickness:</label>
+        <input id="thickness-input" max="50" min="0" type="number">
+    </div>
+
+    <div class="input-field">
+        <label for="outline-color-input">Outline Color:</label>
+        <input id="outline-color-input" type="color" value="#000000">
+    </div>
+</div>
+
+<div class="circle-image">
+    <canvas id="pixel-circle"></canvas>
+    <canvas height="1000" id="overlay-circle" width="1000"></canvas>
+</div>
+
+<button id="button">Generate</button>
+
+<script src="script.js"></script>
+</body>
+</html>
