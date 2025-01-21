@@ -3,51 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Pixel Circle</title>
+    <title>Pixel Circle Generator</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<h1>Pixel Circle</h1>
+<h1>Pixel Circle Generator</h1>
 
-<p>Generate and export pixel art circles with ease!</p>
+<p>Generate and export pixel art circles and ellipses with ease!</p>
 
 <hr>
 
-<div class="options">
-    <div class="input-field">
-        <label for="a-input">Width:</label>
-        <input id="a-input" max="100" min="0" type="number">
-        <label for="b-input">Height:</label>
-        <input id="b-input" max="100" min="0" type="number">
+<div class="container">
+    <div id="left">
+        <div class="options">
+            <label for="is-circle-check">Draw an ellipse (width =/= height):</label>
+            <input id="is-circle-check" type="checkbox">
+        </div>
+        <div class="options">
+            <label for="overlay-check" id="overlay-label">Overlay real circle:</label>
+            <input id="overlay-check" type="checkbox">
+        </div>
+
+        <div class="options" id="options">
+            <div class="input-field">
+                <label for="a-input" id="a-label">Diameter:</label>
+                <input id="a-input" max="100" min="0" type="number">
+                <label for="b-input" hidden="hidden" id="b-label">Height:</label>
+                <input hidden="hidden" id="b-input" max="100" min="0" type="number">
+                <label for="fill-color-input">Fill Color:</label>
+                <input id="fill-color-input" type="color" value="#F15025">
+            </div>
+
+            <div class="input-field">
+                <label for="thickness-input">Outline Thickness:</label>
+                <input id="thickness-input" max="50" min="0" type="number">
+                <label for="outline-color-input">Outline Color:</label>
+                <input id="outline-color-input" type="color" value="#191919">
+            </div>
+        </div>
+
+        <button id="button">Save Image</button>
     </div>
 
-    <div class="input-field">
-        <label for="fill-color-input">Fill Color:</label>
-        <input id="fill-color-input" type="color" value="#F15025">
-    </div>
-
-    <div class="input-field">
-        <label for="thickness-input">Outline Thickness:</label>
-        <input id="thickness-input" max="50" min="0" type="number">
-    </div>
-
-    <div class="input-field">
-        <label for="outline-color-input">Outline Color:</label>
-        <input id="outline-color-input" type="color" value="#000000">
+    <div class="circle-image" id="circle-container">
+        <canvas id="pixel-circle"></canvas>
+        <canvas height="1000" id="overlay-circle" width="1000"></canvas>
     </div>
 </div>
-
-<div class="options">
-    <label for="overlay-check">Overlay Real Circle:</label>
-    <input id="overlay-check" type="checkbox">
-</div>
-
-<div class="circle-image" id="circle-container">
-    <canvas id="pixel-circle"></canvas>
-    <canvas height="1000" id="overlay-circle" width="1000"></canvas>
-</div>
-
-<button id="button">Save Image</button>
 
 <script src="script.js"></script>
 </body>
