@@ -15,9 +15,10 @@
 
 <div class="options">
     <div class="input-field">
-        <label for="a-input">Dimensions:</label>
+        <label for="a-input">Width:</label>
         <input id="a-input" max="100" min="0" type="number">
-        <input id="b" max="100" min="0" type="number">
+        <label for="b-input">Height:</label>
+        <input id="b-input" max="100" min="0" type="number">
     </div>
 
     <div class="input-field">
@@ -41,12 +42,12 @@
     <input id="overlay-check" type="checkbox">
 </div>
 
-<div class="circle-image">
+<div class="circle-image" id="circle-container">
     <canvas id="pixel-circle"></canvas>
     <canvas height="1000" id="overlay-circle" width="1000"></canvas>
 </div>
 
-<button id="button">Generate</button>
+<button id="button">Save</button>
 
 <script src="script.js"></script>
 </body>
